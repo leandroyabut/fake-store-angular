@@ -14,4 +14,8 @@ export class FakeStoreService {
   getProducts(): Observable<Product[]> {
     return this.httpClient.get<Product[]>(`${environment.api}/products`);
   }
+
+  getProduct(id: number): Observable<Product> {
+    return this.httpClient.get<Product>(`${environment.api}/products/${id}`);
+  }
 }

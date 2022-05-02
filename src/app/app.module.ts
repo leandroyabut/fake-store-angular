@@ -11,6 +11,9 @@ import { ProductsComponent } from './pages/products/products.component';
 import { ProductListingComponent } from './product-listing/product-listing.component';
 import { HttpClientModule } from "@angular/common/http";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProductComponent } from './pages/product/product.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {AppIconModule} from "./app-icon.module";
 
 @NgModule({
   declarations: [
@@ -20,13 +23,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NotFoundComponent,
     LandingComponent,
     ProductsComponent,
-    ProductListingComponent
+    ProductListingComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FontAwesomeModule,
+    AppIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

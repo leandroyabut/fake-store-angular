@@ -9,7 +9,10 @@
     </div>
     <div class="my-3">
       <ul class="list-group" *ngIf="!loading; else spinner">
-        <li class="list-group-item list-group-item-action" *ngFor="let product of products" routerLink="/products/{{product.id}}">
+        <li class="list-group-item list-group-item-action"
+            *ngFor="let product of products"
+            routerLink="/products/{{product.id}}"
+            [state]="{product}">
           <app-product-listing [product]="product"></app-product-listing>
         </li>
       </ul>
