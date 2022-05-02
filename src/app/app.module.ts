@@ -14,6 +14,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ProductComponent} from './pages/product/product.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {AppIconModule} from "./app-icon.module";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -26,14 +27,15 @@ import {AppIconModule} from "./app-icon.module";
     ProductListingComponent,
     ProductComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    NgbModule,
-    FontAwesomeModule,
-    AppIconModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        NgbModule,
+        FontAwesomeModule,
+        AppIconModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

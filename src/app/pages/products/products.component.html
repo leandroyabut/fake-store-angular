@@ -5,6 +5,23 @@
       <div class="card-text">
         <p>Browse our products below.</p>
       </div>
+      <div class="row">
+        <div class="col">
+          <div class="input-group" *ngIf="!loadingCat && categories; else spinner">
+            <div class="input-group-text">Category</div>
+            <select class="form-select" [(ngModel)]="category" (change)="loadProductsInCategory(category)">
+              <option value="all">All</option>
+              <option *ngFor="let c of categories" [value]="c">{{c | titlecase}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-switch">
+            <input id="descCheck" type="checkbox" class="form-check-input" (change)="loadProductsInCategory(category)" [(ngModel)]="desc"/>
+            <label for="descCheck" class="form-check-label mx-2">Descending</label>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="my-3">
