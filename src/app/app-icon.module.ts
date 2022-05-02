@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {FaIconLibrary, FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {faAngleLeft, faShoppingBag, IconDefinition} from "@fortawesome/free-solid-svg-icons";
 

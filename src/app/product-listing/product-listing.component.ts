@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Product } from '../interfaces/product';
+import {Component, Input, OnInit} from '@angular/core';
+import {Product} from '../interfaces/product';
 
 @Component({
   selector: 'app-product-listing',
@@ -9,9 +9,13 @@ import { Product } from '../interfaces/product';
 export class ProductListingComponent implements OnInit {
 
   @Input()
+  mode?: "default" | "card";
+
+  @Input()
   product!: Product;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

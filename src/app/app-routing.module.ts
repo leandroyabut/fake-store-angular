@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { LandingComponent } from './pages/landing/landing.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { ProductsComponent } from './pages/products/products.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {LandingComponent} from './pages/landing/landing.component';
+import {NotFoundComponent} from './pages/not-found/not-found.component';
+import {ProductsComponent} from './pages/products/products.component';
 import {ProductComponent} from "./pages/product/product.component";
 
 const routes: Routes = [
@@ -29,4 +29,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

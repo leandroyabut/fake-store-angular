@@ -1,13 +1,26 @@
-<div class="d-flex px-1 py-3 justify-content-start align-items-start">
-    <img [src]="product.image" class="product-img" [alt]="product.title"/>
-    <div class="d-flex flex-column">
-        <div class="small">{{product.title}}</div>
-        <div class="my-1">
-          <ngb-rating [max]="5" [rate]="product.rating.rate" [readonly]="true" class="text-primary fs-5"></ngb-rating>
-          <span class="small fw-light mx-2">{{product.rating.count}}</span>
-        </div>
-        <div class="fw-bold fs-4">
-          {{product.price | currency}}
-        </div>
+<div *ngIf="!mode || mode === 'default'" class="d-flex px-1 py-3 justify-content-start align-items-start">
+  <img [src]="product.image" class="product-img" [alt]="product.title"/>
+  <div class="d-flex flex-column">
+    <div class="small">{{product.title}}</div>
+    <div class="my-1">
+      <ngb-rating [max]="5" [rate]="product.rating.rate" [readonly]="true" class="text-primary fs-5"></ngb-rating>
+      <span class="small fw-light mx-2">{{product.rating.count}}</span>
     </div>
+    <div class="fw-bold fs-4">
+      {{product.price | currency}}
+    </div>
+  </div>
+</div>
+<div *ngIf="mode === 'card'" class="card mx-2 h-100">
+  <img [src]="product.image" class="card-img-top product-img" [alt]="product.title"/>
+  <div class="card-body">
+    <div class="card-title">{{product.title}}</div>
+    <div class="my-1">
+      <ngb-rating [max]="5" [rate]="product.rating.rate" [readonly]="true" class="text-primary"></ngb-rating>
+      <span class="small fw-light mx-2">{{product.rating.count}}</span>
+    </div>
+  </div>
+  <div class="card-footer">
+    <a type="button" class="btn btn-primary w-100 text-center" routerLink="/products/{{product.id}}">View</a>
+  </div>
 </div>
