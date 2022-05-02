@@ -1,0 +1,13 @@
+<div class="d-flex px-1 py-3 justify-content-start align-items-start">
+    <img [src]="product.image" class="product-img" [alt]="product.title"/>
+    <div class="d-flex flex-column">
+        <div class="small">{{product.title}}</div>
+        <div class="my-1">
+          <ngb-rating [max]="5" [rate]="product.rating.rate" [readonly]="true" class="text-primary fs-5"></ngb-rating>
+          <span class="small fw-light mx-2">{{product.rating.count}}</span>
+        </div>
+        <div class="fw-bold fs-4">
+          {{product.price | currency}}
+        </div>
+    </div>
+</div>
