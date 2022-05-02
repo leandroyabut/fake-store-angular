@@ -1,11 +1,12 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FaIconLibrary, FontAwesomeModule} from "@fortawesome/angular-fontawesome";
-import {faAngleLeft, faShoppingBag, IconDefinition} from "@fortawesome/free-solid-svg-icons";
+import {faAngleLeft, faAngleRight, faShoppingBag, IconDefinition} from "@fortawesome/free-solid-svg-icons";
 
 const icons: IconDefinition[] = [
   faAngleLeft,
-  faShoppingBag
+  faShoppingBag,
+  faAngleRight
 ];
 
 @NgModule({
